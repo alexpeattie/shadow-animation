@@ -14,7 +14,7 @@ Change the shadow to a centered 30-pixel blur with the color blue (#44f):
 
 The plugin works in the current versions for Firefox, Safari and Chrome. It also works in the platform preview release of Internet Explorer 9.
 
-Due to a bug in Opera, it doesn't work in this browser. A bugreport has been filed.
+Due to a [bug in Opera](http://www.bitstorm.org/jquery/shadow-animation/bugtest.html), it doesn't work in this browser. A bug report has been filed.
 
 Currently, the shadow offset, blur and spread should be defined in pixels, so no ems, percentages etcetera. The plugin supports only one shadow.
 
@@ -34,4 +34,4 @@ Version 1.0, released June 9th, 2010. First release.
 
 ## License
 
-This jQuery-plugin is available under the MIT and GPL License.
+This jQuery-plugin is available under the [MIT and GPL License](http://www.bitstorm.org/jquery/license.html).
