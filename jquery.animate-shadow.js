@@ -69,9 +69,9 @@ jQuery(function($, undefined) {
 		if (begin.inset) {
 			parts.push('inset');
 		}
-		if (typeof end.left != 'undefined') {
-			parts.push(parseInt(begin.left + pos * (end.left - begin.left), 10) + 'px '
-					+ parseInt(begin.top + pos * (end.top - begin.top), 10) + 'px');
+		if (typeof end.right != 'undefined') {
+			parts.push(parseInt(begin.right + pos * (end.right - begin.right), 10) + 'px '
+					+ parseInt(begin.bottom + pos * (end.bottom - begin.bottom), 10) + 'px');
 		}
 		if (typeof end.blur != 'undefined') {
 			parts.push(parseInt(begin.blur + pos * (end.blur - begin.blur), 10) + 'px');
@@ -119,9 +119,9 @@ jQuery(function($, undefined) {
 
 		// Parse offset, blur and radius
 		if (match = /(-?[0-9]+)(?:px)?\s+(-?[0-9]+)(?:px)?(?:\s+(-?[0-9]+)(?:px)?)?(?:\s+(-?[0-9]+)(?:px)?)?/.exec(shadow)) {
-			parsedShadow = {left: parseInt(match[1], 10), top: parseInt(match[2], 10), blur: match[3] ? parseInt(match[3], 10) : 0, spread: match[4] ? parseInt(match[4], 10) : 0};
+			parsedShadow = {right: parseInt(match[1], 10), bottom: parseInt(match[2], 10), blur: match[3] ? parseInt(match[3], 10) : 0, spread: match[4] ? parseInt(match[4], 10) : 0};
 		} else {
-			parsedShadow = {left: 0, top: 0, blur: 0, spread: 0};
+			parsedShadow = {right: 0, bottom: 0, blur: 0, spread: 0};
 		}
 
 		// Inset or not
