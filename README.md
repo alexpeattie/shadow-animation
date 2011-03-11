@@ -2,7 +2,7 @@
 
 ## Easily animate box shadows
 
-With this jQuery plugin, you can extend the animate function to support the CSS box shadow-property. You can animate the color, the x- and y-offset, the blur-radius and spread-radius. Mark Carver contributed code to support rgba-colors (the alpha channel).
+With this jQuery plugin, you can extend the animate function to support the CSS box shadow-property. You can animate the color, the x- and y-offset, the blur-radius and spread-radius. Mark Carver contributed code to support rgba-colors (the alpha channel). Alex Peattie contributed code to support other units (em and pt), and some misc. fixes.
 
 ## Example
 
@@ -16,9 +16,15 @@ The plugin works in the current versions for Firefox, Safari and Chrome. It also
 
 Due to a [bug in Opera](http://www.bitstorm.org/jquery/shadow-animation/bugtest.html), it doesn't work in this browser. A bug report has been filed.
 
-Currently, the shadow offset, blur and spread should be defined in pixels, so no ems, percentages etcetera. The plugin supports only one shadow.
+If setting the opacity of a shadow to 0, you should instead use a very small number like 0.01 (otherwise Firefox will lose the shadow's color information), like so:
+
+    .animate({boxShadow: 0 0 10px rgba(255,0,255,0.01)});
+
+Currently, the shadow offset, blur and spread should be defined in pixels, ems or pts. Percentages and [other units](https://developer.mozilla.org/en/CSS/length) are unsupported. The plugin currently supports only one shadow.
 
 ## Release history
+
+Version 1.6, released March 11th, 2011. Added support for em and pt. Other minor fixes.
 
 Version 1.5, released January 20th, 2011. Renamed shadow to boxShadow.
 

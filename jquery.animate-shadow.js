@@ -2,7 +2,7 @@
  * Shadow animation jQuery-plugin 1.5
  * http://www.bitstorm.org/jquery/shadow-animation/
  * Copyright 2011 Edwin Martin <edwin@bitstorm.org>
- * Contributors: Mark Carver, Xavier Lepretre
+ * Contributors: Mark Carver, Xavier Lepretre, Alex Peattie
  * Released under the MIT and GPL licenses.
  */
 
