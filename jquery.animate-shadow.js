@@ -118,7 +118,14 @@ jQuery(function($, undefined) {
 		}
 
 		// Parse offset, blur and radius
-		if (match = /(-?[0-9]+)(?:px)?\s+(-?[0-9]+)(?:px)?(?:\s+(-?[0-9]+)(?:px)?)?(?:\s+(-?[0-9]+)(?:px)?)?/.exec(shadow)) {
+		if (match = /(-?[0-9.]+(?:px|em|pt)?)\s+(-?[0-9.]+(?:px|em|pt)?)(?:\s+(-?[0-9.]+(?:px|em|pt)?))?(?:\s+(-?[0-9]+(?:px|em|pt)?))?/.exec(shadow)) {
+      
+      // Convert em and pt values to px
+      match = match.map( function(m) {
+        if (/em/.test(m)) return parseFloat(m) * parseFloat($("body").css("fontSize"));
+        if (/pt/.test(m)) return parseFloat(m)/72*96;
+        return m;
+      });
 			parsedShadow = {right: parseInt(match[1], 10), bottom: parseInt(match[2], 10), blur: match[3] ? parseInt(match[3], 10) : 0, spread: match[4] ? parseInt(match[4], 10) : 0};
 		} else {
 			parsedShadow = {right: 0, bottom: 0, blur: 0, spread: 0};

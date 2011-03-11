@@ -74,7 +74,7 @@
 			$("#box3").mousedown(function(){ $(this).stop().animate({boxShadow: "3px 3px 3px", top: 3}, "fast"); }).mouseup(function(){ $(this).stop().animate({boxShadow: "8px 8px 15px", top: 0}, "fast"); });
 			
 			// Box 4 uses a negative pixel value in its shadow animation (on hover)
-			$("#box4").hover(function(){ $(this).stop().animate({boxShadow: "-3px -3px 3px"}); }, function(){ $(this).stop().animate({boxShadow: "8px 8px 15px"}); });
+			$("#box4").hover(function(){ $(this).stop().animate({boxShadow: "-3px -0.5em 3px"}); }, function(){ $(this).stop().animate({boxShadow: "8px 8px 15px"}); });
 			
 			// Box 5 uses an alpha value to fade its shadow to transparent on hover
 			$("#box5").hover(function(){ $(this).stop().animate({boxShadow: "0 0 30px rgba(0,0,0,0.01)"}); }, function(){ $(this).stop().animate({boxShadow: "0 0 10px rgba(0,0,0,1)"}); });
